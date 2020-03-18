@@ -14,7 +14,7 @@ class LinkedList{
     insertFirst(element){
         const node = new _Node(element);
         node.next = this.head;
-        this.head = element;
+        this.head = node;
     }
 
     insertLast(element){
