@@ -60,6 +60,25 @@ class LinkedList{
             return;
         }
         previousNode.next = currNode.next;
+
+        this.size --
+    }
+
+    find(item) {
+        let currNode = this.head;
+
+        if(!this.head) {
+            return null;
+        }
+        while (currNode.value !== item) {
+            if (currNode.next === null) {
+                return null;
+            }
+            else {
+                currNode = currNode.next;
+            }
+        }
+        return currNode;
     }
 }
 
