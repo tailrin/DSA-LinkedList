@@ -80,6 +80,22 @@ class LinkedList{
         }
         return currNode;
     }
+
+    insertBefore(value) {
+        let currNode = this.head;
+        let previousNode = this.head;
+        const newNode = new _Node(value)
+
+        while (value !== currNode.value) {
+            if (currNode.next === null) {
+                return null;
+            }
+            else {
+                newNode.next = previousNode.next
+                previousNode.next === newNode
+            }
+        }
+    }
 }
 
 module.exports = LinkedList;
