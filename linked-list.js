@@ -96,6 +96,21 @@ class LinkedList{
             }
         }
     }
+
+    insertAfter(value){
+        let currNode = this.head;
+        const newNode = new _Node(value);
+
+        while (value !== currNode.value) {
+            if (currNode.next === null) {
+                return null;
+            }
+            else {
+                newNode.next = currNode.next
+                currNode.next = newNode;
+            }
+        }
+    }
 }
 
 module.exports = LinkedList;
