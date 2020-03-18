@@ -111,6 +111,26 @@ class LinkedList{
             }
         }
     }
+
+    insertAt(index, element) {
+        let currNode = this.head;
+        let newNode = new _Node(element);
+        let previousNode = this.head;
+
+        let i = 1
+        while (i !== index) {
+            if (index < 1) {
+                return 'indexing starts at 1'
+            }
+            currNode = currNode.next
+            if(index !== i) {
+                previousNode = currNode
+            }
+            i++
+        }
+        newNode.next = currNode
+        previousNode.next = newNode
+    }
 }
 
 module.exports = LinkedList;
