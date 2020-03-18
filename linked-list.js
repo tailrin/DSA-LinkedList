@@ -1,6 +1,6 @@
 class _Node {
     constructor(element) {
-        this.value = value;
+        this.value = element;
         this.next = null;
     }
 }
@@ -36,7 +36,7 @@ class LinkedList{
     }
 
     remove(node){
-        
+
     }
 }
 
