@@ -81,10 +81,10 @@ class LinkedList{
         return currNode;
     }
 
-    insertBefore(value) {
+    insertBefore(value, element) {
         let currNode = this.head;
         let previousNode = this.head;
-        const newNode = new _Node(value)
+        const newNode = new _Node(element)
 
         while (value !== currNode.value) {
             if (currNode.next === null) {
@@ -97,9 +97,9 @@ class LinkedList{
         }
     }
 
-    insertAfter(value){
+    insertAfter(value, element){
         let currNode = this.head;
-        const newNode = new _Node(value);
+        const newNode = new _Node(element);
 
         while (value !== currNode.value) {
             if (currNode.next === null) {
